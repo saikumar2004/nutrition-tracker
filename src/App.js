@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import {useEffect, useState} from 'react'
+import Register from './components/Register';
+import Login from './components/Login';
+import Notfound from './components/Notfound';
+import Track from './components/Track'
+import {UserContext } from './contexts/UserContext';
+import Private from './components/Private';
+import Diet from "./components/Diet"
+import Home from "./components/home"
 
 function App() {
+  const [loggedUser,setLoggedUser]=useState(JSON.parse(localStorage.getItem("nutrify-user")));
+  // console.log(loggedUser);
+    useEffect(()=>{
+      console.log(loggedUser);
+    },[])
+    
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+   <div>
+    <UserContext.Provider value={{loggedUser,setLoggedUser}}>
+  <BrowserRouter>
+   <Routes>
+   <Route path='/' element={<Login/>}/>
+    <Route path='/register' element={<Register/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/home' element={<Private  Component={Home} />} />
+    <Route path='/track' element={<Private Component={Track}/>} />
+    <Route path='/diet' element={<Private Component={Diet} />}  />
+    <Route path='*' element={<Notfound/>}/>
+   </Routes>
+   </BrowserRouter>
+   
+   
+   </UserContext.Provider>
+   </div>
   );
 }
 
