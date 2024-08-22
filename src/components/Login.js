@@ -3,20 +3,15 @@ import {useState,useContext} from 'react';
 import {UserContext} from '../contexts/UserContext';
 function Login(){
   const loggedData=useContext(UserContext);
-
-  
     const navigate=useNavigate();
-
     const[userCreds,setUserCreds]=useState({
         email:"",
         password:""
     })
-
     const [message,setMessage]=useState({
         type:"invisible-msg",
         text:""
     })
-
     function handleInput(event){
         setUserCreds((prevState)=>{
       return {...prevState,[event.target.name]:event.target.value}
@@ -28,7 +23,7 @@ function Login(){
      function handleSubmit(event){
         event.preventDefault();
         
-        fetch("http://localhost:8000/login",{
+        fetch("https://nutrient-tracker-backend.onrender.com/login",{
             method:'POST',
             body:JSON.stringify(userCreds),
             headers:{

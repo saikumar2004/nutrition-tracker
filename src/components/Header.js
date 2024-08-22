@@ -1,26 +1,40 @@
 import {UserContext} from "../contexts/UserContext";
-import {useContext} from "react";
-import { useNavigate ,Link} from "react-router-dom";
-function Header(){
-    const loggedData=useContext(UserContext);
-  const navigate=useNavigate();
-    function logout(){
-        localStorage.removeItem("nutrify-user")
+import {useContext, useState} from "react";
+import {useNavigate, Link} from "react-router-dom";
+
+function Header() {
+    const loggedData = useContext(UserContext);
+    const navigate = useNavigate();
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    function logout() {
+        localStorage.removeItem("nutrify-user");
         loggedData.setLoggedUser(null);
         navigate("/login");
     }
-       return(
+
+    function toggleNav() {
+        setIsNavOpen(!isNavOpen);
+    }
+
+    return (
         <div className="header-con">
-            <h1 style={{color:"blue",fontFamily:"sans-serif",marginLeft:"15px"}}>SparkNutriTrac</h1>
-            <ul  className="header-ul">
-                
-            <Link to="/home"> <li>Home</li></Link>
-               <Link to="/track"> <li>Track</li></Link>
-               <Link to="/diet"> <li>Diet</li></Link>
-                
+            <div className="head">  
+                <h1 className="header-title">SparkNutriTrac</h1>
+            <button className="nav-toggle-btn" onClick={toggleNav}>
+                &#9776;
+            </button></div>
+          
+            <ul className={`header-ul ${isNavOpen ? 'open' : ''}`}>
+                <Link to="/home"><li>Home</li></Link>
+                <Link to="/track"><li>Track</li></Link>
+                <Link to="/diet"><li>Diet</li></Link>
+                <Link to="/contact"><li>Contact Us</li></Link>
+                <button className="btn header-btn" onClick={logout}>Log out</button>
             </ul>
-            <button class="btn header-btn" onClick={logout}>Log out</button>
+            
         </div>
-       )
+    );
 }
+
 export default Header;

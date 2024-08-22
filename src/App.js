@@ -9,6 +9,7 @@ import {UserContext } from './contexts/UserContext';
 import Private from './components/Private';
 import Diet from "./components/Diet"
 import Home from "./components/home"
+import Contact from "./components/Contact"
 
 function App() {
   const [loggedUser,setLoggedUser]=useState(JSON.parse(localStorage.getItem("nutrify-user")));
@@ -30,6 +31,7 @@ function App() {
     <Route path='/home' element={<Private  Component={Home} />} />
     <Route path='/track' element={<Private Component={Track}/>} />
     <Route path='/diet' element={<Private Component={Diet} />}  />
+    <Route path='/contact' element={<Private Component={Contact} />}  />
     <Route path='*' element={<Notfound/>}/>
    </Routes>
    </BrowserRouter>

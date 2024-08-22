@@ -22,7 +22,7 @@ export default function Diet()
 
     useEffect(()=>{
 
-        fetch(`http://localhost:8000/track/${loggedData.loggedUser.userid}/${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`,{
+        fetch(`https://nutrient-tracker-backend.onrender.com/track/${loggedData.loggedUser.userid}/${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`,{
             method:"GET",
             headers:{
                 "Authorization":`Bearer ${loggedData.loggedUser.token}`
@@ -74,17 +74,17 @@ export default function Diet()
 
     return (
         <div >
+            <Header/>
         <div className="tarck-con">
-     <Header/>
+     
      <input type="date" className="date" onChange={(event)=>{
                  setDate(new Date(event.target.value));
                 }}/>
      </div>
-        <section className="container diet-container">
+        <section className=" diet-container">
 
                 {
                     items.map((item)=>{
-
                        
                         return (
                             <div className="item" key={item._id}>
@@ -107,14 +107,6 @@ export default function Diet()
             <p>Protein {total.totalProtein}g, Carbs {total.totalCarbs}g, Fats {total.totalFats}g, Fiber {total.totalFiber}g</p>
 
         </div>
-
-
-                
-
-
-
-
-
         </section>
         </div>
     )

@@ -25,7 +25,7 @@ function Register(){
     function handleSubmit(event){
          event.preventDefault();
      //console.log(userDetails);
-     fetch("http://localhost:8000/register",{
+     fetch("https://nutrient-tracker-backend.onrender.com/register",{
         method:"POST",
         body:JSON.stringify(userDetails),
         headers:{
