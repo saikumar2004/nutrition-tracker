@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nutrition-tracker/static/css/main.9f651a01.css",
+    "main.css": "/nutrition-tracker/static/css/main.d9ce96e3.css",
     "main.js": "/nutrition-tracker/static/js/main.c7facd16.js",
     "static/js/453.a73b54ef.chunk.js": "/nutrition-tracker/static/js/453.a73b54ef.chunk.js",
     "index.html": "/nutrition-tracker/index.html",
-    "main.9f651a01.css.map": "/nutrition-tracker/static/css/main.9f651a01.css.map",
+    "main.d9ce96e3.css.map": "/nutrition-tracker/static/css/main.d9ce96e3.css.map",
     "main.c7facd16.js.map": "/nutrition-tracker/static/js/main.c7facd16.js.map",
     "453.a73b54ef.chunk.js.map": "/nutrition-tracker/static/js/453.a73b54ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f651a01.css",
+    "static/css/main.d9ce96e3.css",
     "static/js/main.c7facd16.js"
   ]
 }
