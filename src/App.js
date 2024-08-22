@@ -25,7 +25,7 @@ function App() {
     <UserContext.Provider value={{loggedUser,setLoggedUser}}>
   <BrowserRouter>
    <Routes>
-   <Route path='/' element={<Login/>}/>
+   <Route path='/nutrition-tracker' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/home' element={<Private  Component={Home} />} />
