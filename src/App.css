@@ -426,8 +426,7 @@ animation: rotate 3s steps(20,end)infinite;
 }
 
 .home-video iframe {
-  width: 100%;
-  width: 460px;
+   width: 460px;
   height: 300px;
 }
 
@@ -576,6 +575,12 @@ animation: rotate 3s steps(20,end)infinite;
 
 
 @media (max-width: 640px) {
+  .header-title {
+    color: blue;
+    font-family: sans-serif;
+    margin-left: 10px;
+    font-size: 28px;
+  }
 
   .contact-col {
     width:100%;
@@ -585,7 +590,10 @@ animation: rotate 3s steps(20,end)infinite;
   .contact {
     flex-direction: column;
   }
-  
+  .home-video iframe {
+    width: 260px;
+   height: 180px;
+ }
   
 }
 
