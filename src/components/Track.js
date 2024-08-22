@@ -64,7 +64,7 @@ function Track() {
                         </div>
                     ) : (
                         <h2 className="tarck-head">
-                            Let's Search a Food .  
+                            Let's Search a Food .
                         </h2>
                     )}
                 </div>
