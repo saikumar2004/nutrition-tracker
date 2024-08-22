@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+![Screenshot 2024-07-11 162501](https://github.com/saikumar2004/nutrition-tracker-frontend/assets/105036029/91f5b0b6-7a5a-470b-a488-4cebc7b154f3)
+![Screenshot 2024-07-11 162524](https://github.com/saikumar2004/nutrition-tracker-frontend/assets/105036029/560e3c40-e41c-4b68-be86-975e9f7ead37)
+![Screenshot 2024-07-11 162654](https://github.com/saikumar2004/nutrition-tracker-frontend/assets/105036029/07ecdb77-6019-4b70-9860-71453cab7d73)
+![Screenshot 2024-07-11 162709](https://github.com/saikumar2004/nutrition-tracker-frontend/assets/105036029/86381963-b93d-49ab-b34b-b9eeb095ea44)
+
+The application features an intuitive interface that enables users to log their daily dietary intake, monitor calorie consumption, and track the quantity of food consumed. The app offers real-time feedback on nutrient levels, helping users make informed dietary choices and maintain a balanced diet.
+This application features authentication and route protection to enhance security.
+
+
+
+
+# Getting Started with Create React App.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
