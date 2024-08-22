@@ -699,7 +699,7 @@ animation: rotate 3s steps(20,end)infinite;
 
  .head .nav-toggle-btn {
       display:flex;
-     margin-left:56%;
+     margin-left:55%;
   }
 }
 @media (max-width: 768px) {
